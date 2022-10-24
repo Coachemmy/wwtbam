@@ -1,0 +1,208 @@
+
+
+.App{
+  margin: 0;
+  background-color: #200230;
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+.main{
+  width: 75%;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), #200230), url(../src/asset/bg.jpg);
+  display: flex;
+  flex-direction: column;
+}
+
+.up{
+  height: 50%;
+  position: relative;
+}
+
+.timer{
+  width: 70px;
+  height: 70px;
+  border: 5px solid white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+  left: 80px;
+}
+
+.bottom{
+  height: 50%;
+}
+
+.wwtbam{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wwtbamQ{
+  width: 80%;
+  background-color: rgb(21, 5, 34);
+  border: 2px solid white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.wwtbamAs{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.wwtbamA{
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: rgb(27, 2, 31);
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+}
+
+.wwtbamA:hover, .wwtbamA.active{
+  background-color: mediumblue;
+}
+
+.wwtbamA.correct{
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%, 22%, 42%{
+    background-color: mediumblue;
+  }
+
+  20%, 40%, 60% {
+    background-color: rgb(27, 2, 31);
+  }
+
+  62%, 100%{
+    background-color: green;
+  }
+}
+
+
+.wwtbamA.wrong{
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%, 22%, 42%{
+    background-color: mediumblue;
+  }
+
+  20%, 40%, 60% {
+    background-color: rgb(27, 2, 31);
+  }
+
+  62%, 100%{
+    background-color: crimson;
+  }
+}
+
+
+
+.second{
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.money{
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.moneyNumber{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.moneyNumber.active{
+  background-color: teal;
+}
+
+.moneyNumberN{
+  font-size: 18px;
+  font-weight: 100;
+  width: 30%;
+
+
+}
+
+.moneyNumberA{
+  font-size: 20px;
+  font-weight: 300;
+  
+}
+
+.endText{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.start{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+.startInput{
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.startInput:focus{
+  outline: none;
+}
+
+.startButton{
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+}
