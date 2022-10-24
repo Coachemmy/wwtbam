@@ -1,6 +1,6 @@
 // eslint-disable
 import './App.css';
-import {useEffect, useState, useMemo} from 'react'
+import {useEffect, useState} from 'react'
 import WWTBAM from './components/WWTBAM';
 import Timer from './components/Timer';
 import {data, moneyP} from './components/Data'

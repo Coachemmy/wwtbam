@@ -1,5 +1,5 @@
 // eslint-disable
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import useSound from 'use-sound'
 /*import intro from '../asset/intro.wav'
 import correct from '../asset/correct.mp3'
@@ -7,6 +7,7 @@ import wrong from '../asset/wrong.mp3'*/
 
 const WWTBAM = ({data, setStop, setQuestN, questN}) => {
 
+    const processing = useRef(false)
     const [qt, setQt] = useState(null)
     const [selectedA, setSelectedA] = useState(null)
     const [classN, setClassN] = useState('wwtbamA')
@@ -32,6 +33,11 @@ const WWTBAM = ({data, setStop, setQuestN, questN}) => {
     }
 
     const handleClick = (item) => {
+        if(processing.current) return;
+            processing.current = true;
+            setTimeout(()=>{
+                processing.current = false;
+            }, 5000)
         setSelectedA(item)
         setClassN('wwtbamA active')
         delay(3000, () => 
@@ -40,14 +46,14 @@ const WWTBAM = ({data, setStop, setQuestN, questN}) => {
 
         delay(4000, () => {
             if(item.correct){
-                correctAnswer()
+                //correctAnswer()
                 delay(2000, () => {
                 setQuestN((prev) => prev + 1)
                 setSelectedA(null)
                 })
                 
             } else {
-                wrongAnswer()
+                //wrongAnswer()
                 delay(2000, () => { 
                 setStop(true)
                 })

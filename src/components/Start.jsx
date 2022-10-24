@@ -10,7 +10,11 @@ export default function Start ({setName}) {
     }
 
     return (
+        
         <div className = 'start'>
+        <div className = 'startme'>🏆COACHEMMY WWTBAM🏆
+        </div>
+            
             <input 
             type = 'text' 
             placeholder = 'Enter Your Name' 
