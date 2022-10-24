@@ -1,23 +1,23 @@
 // eslint-disable
 import React, {useState, useEffect} from 'react'
 import useSound from 'use-sound'
-import intro from '../asset/intro.wav'
+/*import intro from '../asset/intro.wav'
 import correct from '../asset/correct.mp3'
-import wrong from '../asset/wrong.mp3'
+import wrong from '../asset/wrong.mp3'*/
 
 const WWTBAM = ({data, setStop, setQuestN, questN}) => {
 
     const [qt, setQt] = useState(null)
     const [selectedA, setSelectedA] = useState(null)
     const [classN, setClassN] = useState('wwtbamA')
-    const [correctAnswer] = useSound(correct)
+    /*const [correctAnswer] = useSound(correct)
     const [wrongAnswer] = useSound(wrong)
 
     const [play] = useSound(intro, { volume: .25 })
 
     useEffect(() => {
         play();
-    }, [play])
+    }, [play])*/
 
 
     useEffect(() => {
